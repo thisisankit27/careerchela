@@ -1,0 +1,211 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+@media (min-width: 40em) {
+
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+.btn{
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    margin: 20px;
+    background: #bababa;
+    border: none;
+    cursor: pointer;
+    color: #323232;
+    border-radius: 8px;
+    transition: all 0.6s;
+    box-shadow: 10px 10px 35px #999999,
+                -10px -10px 35px #dbdbdb;
+}
+.btn:hover{
+    color: #fff;
+    background: #ff5722;
+}
+.btn:hover:nth-child(2){
+    color: #fff;
+    background: #6f4a8e;
+}
+.btn-ui{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  background-color: #bababa;
+}
+
+/*info card hover*/
+body{
+    background: black;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 350px;
+    height: 250px;
+    margin: 50px;
+    flex-direction: column;
+    background: white;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    position: relative;
+    transition: all .4s;
+    overflow: hidden;
+}
+.box:hover{
+    color: white;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    width: 5px;
+    height: 150px;
+    border-radius: 50px;
+    transition: all .4s;
+    background: linear-gradient(147deg,#ffe538 0%,#ff2525 74%);
+}
+.box:nth-child(1)::before{
+    background: linear-gradient(19deg,#21d4fd 0%,#8721ff 74%);
+}
+.box:hover::before{
+    top: 0;
+    left: 0;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+}
+.box p,h1{
+    margin: 5px 50px;
+    z-index: 1000;
+}
+
+/*back to top*/
+@media screen and (prefers-reduced-motion: no-preference) {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+}
+.back-to-top-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #D6E3F0;
+  // emoji don't behave like regular fonts
+  // so this helped position it correctly
+  padding: 0.25rem;
+}
+
+.back-to-top-wrapper {
+  // uncomment to visualize "track"
+  // outline: 1px solid red;
+  position: absolute;
+  top: $scrollLength;
+  right: 0.25rem;
+  // Optional, extends the final link into the 
+  // footer at the bottom of the page
+  // Set to `0` to stop at the end of `main`
+  bottom: -5em;
+  // Required for best support in browsers not supporting `sticky`
+  width: 3em;
+  // Disable interaction with this element
+  pointer-events: none;
+}
+.back-to-top-link {
+  // `fixed` is fallback when `sticky` not supported
+  position: fixed;
+  // preferred positioning, requires prefixing for most support, and not supported on Safari
+  // @link https://caniuse.com/#search=position%3A%20sticky
+  position: sticky;
+  // reinstate clicks
+  pointer-events: all;
+  // achieves desired positioning within the viewport
+  // relative to the top of the viewport once `sticky` takes over, or always if `fixed` fallback is used
+  top: calc(100vh - 5rem);
+
+  // ... styles written earlier
+}
